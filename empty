@@ -1,0 +1,51 @@
+#!/bin/bash
+
+# Function to display help
+show_help() {
+    echo "Usage: empty [file|directory]"
+    echo
+    echo "Options:"
+    echo "  -h, --help    Show this help message"
+    echo
+    echo "Description:"
+    echo "  This command empties the content of a file or clears all contents in a directory."
+    echo
+    echo "Examples:"
+    echo "  empty /path/to/directory   # Empties all files and subdirectories in the directory."
+    echo "  empty /path/to/file        # Clears the content of the file."
+    exit 0
+}
+
+# Ensure an argument is provided
+if [ -z "$1" ]; then
+    echo "Error: No file or directory specified."
+    echo "Use 'empty --help' for more information."
+    exit 1
+fi
+
+# Display help if -h or --help is used
+if [[ "$1" == "-h" || "$1" == "--help" ]]; then
+    show_help
+fi
+
+# Check if the argument is a directory
+if [ -d "$1" ]; then
+    # Remove all files, subdirectories, and hidden files
+    rm -rf "$1"/* "$1"/.[!.]* "$1"/..?* 2>/dev/null
+    echo "Directory '$1' emptied. command execution successful"
+    exit 0
+fi
+
+# Check if the argument is a file
+if [ -f "$1" ]; then
+    # Clear file content
+    > "$1"
+    echo "File '$1' content emptied. command execution successful"
+    exit 0
+fi
+
+# Handle invalid input
+echo "Error: '$1' is neither a directory nor a file."
+echo "Use 'empty --help' for more information."
+exit 1
+
