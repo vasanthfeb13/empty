@@ -5,6 +5,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub issues](https://img.shields.io/github/issues/Vasanthfeb13/empty)](https://github.com/Vasanthfeb13/empty/issues)
 ![Platform](https://img.shields.io/badge/platform-linux%20%7C%20unix-blue)
+[![PPA](https://img.shields.io/badge/PPA-available-brightgreen)](https://launchpad.net/~vasanthadithya/+archive/ubuntu/empty-utility)
+[![COPR](https://img.shields.io/badge/COPR-available-brightgreen)](https://copr.fedorainfracloud.org/coprs/vasanthaditya/empty/)
 
 **A lightning-fast utility to safely empty files and directories while preserving their structure!** ⚡
 
