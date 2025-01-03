@@ -41,6 +41,14 @@ empty --help
 
 ## 🗑️ Uninstallation
 
+You can uninstall in two ways:
+
+1. Using the command option (recommended):
+```bash
+sudo empty --uninstall
+```
+
+2. Using the uninstall script:
 ```bash
 # If you still have the repository
 cd empty
@@ -52,11 +60,19 @@ cd empty
 sudo ./uninstall.sh
 ```
 
+After uninstallation, if you try to use the `empty` command, you'll get helpful instructions on how to reinstall it.
+
 ## 📚 Usage
 
 ```bash
-empty [file|directory]
+empty [OPTIONS] [file|directory]
 ```
+
+### Options:
+| Option         | Description                    |
+| -------------- | ------------------------------ |
+| `-h, --help`   | Display help message          |
+| `--uninstall`  | Uninstall empty command       |
 
 ### Examples:
 
@@ -69,6 +85,9 @@ empty /path/to/directory
 
 # Show help message
 empty -h
+
+# Uninstall the command
+sudo empty --uninstall
 ```
 
 ## ⚙️ Options

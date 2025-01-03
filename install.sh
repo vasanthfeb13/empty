@@ -6,6 +6,9 @@ GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
+RECALL_SCRIPT="/usr/local/lib/empty/recall.sh"
+RECALL_DIR="/usr/local/lib/empty"
+
 echo -e "${GREEN}Empty Command Installer${NC}"
 echo "=============================="
 
@@ -24,6 +27,11 @@ install() {
     # Create necessary directories
     mkdir -p /usr/local/bin
     mkdir -p /usr/share/man/man1
+    
+    # Remove any existing recall script
+    rm -f "$RECALL_SCRIPT"
+    rm -f /etc/profile.d/empty-recall.sh
+    rm -rf "$RECALL_DIR"
     
     # Install the main script
     if [ -f "empty" ]; then
@@ -54,6 +62,7 @@ main() {
     if command -v empty >/dev/null; then
         echo -e "${GREEN}Installation successful!${NC}"
         echo -e "${YELLOW}Try it out with: ${NC}empty --help"
+        echo -e "${YELLOW}To uninstall later, run: ${NC}sudo empty --uninstall"
     else
         echo -e "${RED}Installation failed. Please check the errors above.${NC}"
         exit 1
