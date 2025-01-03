@@ -39,16 +39,6 @@ cd empty
 sudo ./install.sh
 ```
 
-### 📦 Manual Installation
-#### Debian/Ubuntu
-```bash
-sudo dpkg -i empty-command.deb
-```
-
-#### Red Hat/Fedora
-```bash
-sudo rpm -i empty-1.0-1.aarch64.rpm
-```
 
 ## 📚 Usage
 
