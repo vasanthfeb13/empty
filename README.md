@@ -27,12 +27,37 @@
 
 ## 🔧 Installation
 
-### 📦 Debian/Ubuntu
+### 📦 Debian/Ubuntu (via PPA)
+
+```bash
+# Add the PPA repository
+sudo add-apt-repository ppa:your-launchpad-vasanthadithya/empty-utility
+sudo apt-get update
+
+# Install empty
+sudo apt-get install empty
+```
+
+### 🎩 Fedora (via COPR)
+
+```bash
+# Enable the COPR repository
+sudo dnf copr enable vasanthaditya/empty
+
+# Install empty
+sudo dnf install empty
+```
+
+### 📥 Manual Installation
+
+#### Debian/Ubuntu
+
 ```bash
 sudo dpkg -i empty-command.deb
 ```
 
-### 🎩 Red Hat/Fedora
+#### Red Hat/Fedora
+
 ```bash
 sudo rpm -i empty-1.0-1.aarch64.rpm
 ```
@@ -44,6 +69,7 @@ empty [file|directory]
 ```
 
 ### Examples:
+
 ```bash
 # Empty a file while keeping its structure
 empty /path/to/file.txt
@@ -57,8 +83,8 @@ empty -h
 
 ## ⚙️ Options
 
-| Option | Description |
-|--------|-------------|
+| Option       | Description          |
+| ------------ | -------------------- |
 | `-h, --help` | Display help message |
 
 ## 🤝 Contributing
