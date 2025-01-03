@@ -29,37 +29,23 @@
 
 ## 🔧 Installation
 
-### 📦 Debian/Ubuntu (via PPA)
-
+### 🚀 Quick Install (Recommended)
 ```bash
-# Add the PPA repository
-sudo add-apt-repository ppa:your-launchpad-vasanthadithya/empty-utility
-sudo apt-get update
+# Clone the repository
+git clone https://github.com/vasanthfeb13/empty.git
+cd empty
 
-# Install empty
-sudo apt-get install empty
+# Run the installer (requires sudo)
+sudo ./install.sh
 ```
 
-### 🎩 Fedora (via COPR)
-
-```bash
-# Enable the COPR repository
-sudo dnf copr enable vasanthaditya/empty
-
-# Install empty
-sudo dnf install empty
-```
-
-### 📥 Manual Installation
-
+### 📦 Manual Installation
 #### Debian/Ubuntu
-
 ```bash
 sudo dpkg -i empty-command.deb
 ```
 
 #### Red Hat/Fedora
-
 ```bash
 sudo rpm -i empty-1.0-1.aarch64.rpm
 ```
